@@ -22,8 +22,13 @@ public class MainActivity extends AppCompatActivity {
         buttonEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //abrir uma activity
                 Intent intent = new Intent(getApplicationContext(),SegundaActivity.class);
+
+                //Passar dados
+                intent.putExtra("nome","Marco");
+                intent.putExtra("idade",30);
+
                 startActivity(intent);
 
             }
