@@ -19,12 +19,12 @@ public class SegundaActivity extends AppCompatActivity {
 
         //recuperar dados enviados de um activity para outra
         Bundle dados = getIntent().getExtras();
-
         String nome = dados.getString("nome");
         int idade = dados.getInt("idade");
+        Usuario usuario = (Usuario) dados.getSerializable("objeto");
 
         //Configurar valores recuperados
-        textNome.setText(nome);
+        textNome.setText(usuario.getNome());
         textIdade.setText(String.valueOf(idade));
 
     }
